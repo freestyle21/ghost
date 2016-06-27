@@ -1,0 +1,29 @@
+<header>
+	<nav class="blog-navbar navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{@blog.url}}">fs21's blog</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<p class="navbar-text hidden-xs hidden-sm">The Road To Modern F2eer.</p>
+				{{> social-icons}}
+			</div>
+		</div>
+	</nav>
+
+	<div class="blog-navbar-under-layer"></div>
+
+	<div class="blog-title container">
+		<div class="blog-logo">
+			<img src="{{@blog.logo}}">
+		</div>
+	</div>
+</header>

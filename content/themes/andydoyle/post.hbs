@@ -1,0 +1,63 @@
+{{!< default}}
+
+<main class="content" role="main">
+	{{#post}}
+
+		<article class="{{post_class}} full container post-container">
+
+			<h1 class="post-title">{{{title}}}</h1>
+
+      <span class="post-meta">
+        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+        <span class="post-tags">
+	        {{tags prefix="on " separator=" | "}}
+        </span>
+      </span>
+
+			<section class="post-content">
+				{{content}}
+			</section>
+
+		</article>
+
+		<footer class="post-footer">
+			<div class="container author-container">
+
+				<div class="author-image col-md-4">
+					<img class="img-circle author-img" src="{{author.image}}" alt="Author"/>
+				</div>
+
+				<div class="author-info col-md-8">
+					<section class="author-description">
+						<h4>{{author.name}}</h4>
+
+						<p>{{author.bio}}</p>
+					</section>
+
+					<section class="share">
+						<h4>Share this post</h4>
+						<a class="icon icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+						   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+							<svg viewBox="0 0 40 32"><path d="M39.4 3.8c-1.55.667-3.1 1.083-4.65 1.25C36.5 4 37.686 2.518 38.303.6c-1.6.95-3.31 1.6-5.126 1.95C31.577.85 29.61 0 27.277 0c-2.234 0-4.138.787-5.714 2.363-1.575 1.575-2.362 3.48-2.362 5.712 0 .6.07 1.217.2 1.85-3.3-.167-6.392-.996-9.284-2.488-2.892-1.49-5.346-3.48-7.363-5.962-.732 1.25-1.1 2.608-1.1 4.075 0 1.383.326 2.667.976 3.85.65 1.183 1.524 2.14 2.624 2.875-1.3-.05-2.516-.392-3.65-1.025v.1c0 1.95.614 3.662 1.84 5.138 1.224 1.475 2.77 2.403 4.636 2.787-.7.183-1.41.275-2.126.275-.466 0-.974-.042-1.524-.125.517 1.617 1.467 2.946 2.85 3.988 1.383 1.04 2.95 1.578 4.7 1.613-2.933 2.3-6.275 3.45-10.025 3.45-.716 0-1.366-.034-1.95-.1C3.75 30.79 7.885 32 12.4 32c2.867 0 5.56-.454 8.075-1.362 2.517-.908 4.667-2.125 6.45-3.65 1.784-1.525 3.322-3.28 4.613-5.263 1.292-1.983 2.254-4.054 2.888-6.212.633-2.16.95-4.32.95-6.488 0-.467-.01-.817-.025-1.05 1.587-1.15 2.937-2.542 4.05-4.175z" fill-rule="evenodd"/></svg>
+						</a>
+						<a class="icon icon-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+						   onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+							<svg viewBox="0 0 33 32"><path d="M30.242 1.76C29.07.587 27.656 0 26.002 0h-20C4.35 0 2.938.587 1.762 1.76.59 2.934.002 4.347.002 6v20c0 1.652.59 3.066 1.76 4.24C2.94 31.413 4.35 32 6.002 32h20c1.656 0 3.07-.587 4.24-1.76 1.177-1.174 1.76-2.588 1.76-4.24V6c0-1.653-.583-3.066-1.76-4.24zm-3.01 14.698h-3.646v13.23h-5.458v-13.23h-2.73v-4.562h2.73v-2.73c0-1.958.458-3.437 1.375-4.437.916-1 2.43-1.5 4.542-1.5h3.645v4.56H25.4c-.78 0-1.275.134-1.49.405-.216.27-.324.746-.324 1.427v2.27h4.125l-.475 4.563z" fill-rule="evenodd"/></svg>
+						</a>
+						<a class="icon icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+						   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+							<svg viewBox="0 0 51 32"><path d="M17 13.714V19.2h9.074c-.365 2.354-2.743 6.903-9.074 6.903-5.463 0-9.92-4.526-9.92-10.103S11.537 5.897 17 5.897c3.11 0 5.19 1.326 6.377 2.47l4.343-4.184C24.93 1.577 21.32 0 17 0 8.154 0 1 7.154 1 16s7.154 16 16 16c9.234 0 15.36-6.49 15.36-15.634 0-1.052-.114-1.852-.25-2.652H17zm34.286 0h-4.572v-4.57h-4.57v4.57H37.57v4.572h4.573v4.57h4.57v-4.57h4.573" fill-rule="evenodd"/></svg>
+						</a>
+					</section>
+				</div>
+
+			</div>
+		</footer>
+
+		<!-- Disqus -->
+		<div class="container post-container" id="disqus_thread"></div>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+		</noscript>
+
+	{{/post}}
+</main>

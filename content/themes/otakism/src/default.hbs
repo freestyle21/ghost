@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="alternate" type="application/rss+xml" title="feed" href="/rss"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset "/favicon/apple-touch-icon-57x57.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset "/favicon/apple-touch-icon-114x114.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset "/favicon/apple-touch-icon-72x72.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset "/favicon/apple-touch-icon-144x144.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{asset "/favicon/apple-touch-icon-60x60.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{asset "/favicon/apple-touch-icon-120x120.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{asset "/favicon/apple-touch-icon-76x76.png"}}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{asset "/favicon/apple-touch-icon-152x152.png"}}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset "/favicon/favicon.ico"}}"/>
+  <link rel="icon" type="image/png" href="{{asset "/favicon/favicon-196x196.png"}}" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{asset "/favicon/favicon-96x96.png"}}" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{asset "/favicon/favicon-32x32.png"}}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{asset "/favicon/favicon-16x16.png"}}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{asset "/favicon/favicon-128.png"}}" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="{{asset "/favicon/mstile-144x144.png"}}" />
+  <meta name="msapplication-square70x70logo" content="{{asset "/favicon/mstile-70x70.png"}}" />
+  <meta name="msapplication-square150x150logo" content="{{asset "/favicon/mstile-150x150.png"}}" />
+  <meta name="msapplication-wide310x150logo" content="{{asset "/favicon/mstile-310x150.png"}}" />
+  <meta name="msapplication-square310x310logo" content="{{asset "/favicon/mstile-310x310.png"}}" />
+  <!-- / Favicon -->
+
+  <!-- Typekit Fonts -->
+  <script src="https://use.typekit.net/ulr4loe.js"></script>
+	<script>try{Typekit.load({ async: false });}catch(e){}</script>
+	<!-- / Typekit Fonts -->
+	
+  <!-- Theme Style -->
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+  <!-- / Theme Style -->
+  
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+  
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	
+	<div id="loading-bar-wrapper">
+	  <div id="loading-bar"></div>
+	</div>
+	
+	<script>setLoadingBarProgress(20);</script>
+	<div class="site-wrapper">
+  {{> header}}
+  
+  <script>setLoadingBarProgress(40);</script>
+  
+  {{{body}}}
+  <script>setLoadingBarProgress(60);</script>
+  
+  {{> footer}}
+  
+	</div>
+	
+	<script>setLoadingBarProgress(80);</script>
+  
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/vendor.js"><\/script>')</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- / Javascript -->
+  
+  <script>setLoadingBarProgress(100);</script>
+  
+	{{ghost_foot}}
+</body>
+</html>
