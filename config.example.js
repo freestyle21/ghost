@@ -23,7 +23,7 @@ config = {
 
         server: {
             host: '127.0.0.1',
-            port: '2368'
+            port: '80'
         }
     },
 
@@ -31,7 +31,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:2368',
+        url: 'http://localhost:80',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
