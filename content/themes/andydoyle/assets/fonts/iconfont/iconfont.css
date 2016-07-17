@@ -18,5 +18,5 @@
 }
 .icon-weibo:before { content: "\e600"; }
 .icon-home:before { content: "\e603"; }
-.icon-github:before { content: "\e601"; }
+.icon-menu:before { content: "\e601"; }
 .icon-github-circle:before { content: "\e602"; }

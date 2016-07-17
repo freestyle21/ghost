@@ -13,7 +13,12 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
-				<p class="navbar-text hidden-xs hidden-sm">The Road To Modern F2eer.</p>
+				<div class="nav-search">
+					<p class="navbar-text hidden-xs hidden-sm">
+						<span class="blog-says">The Road To Modern F2eer.</span>
+					</p>
+					<input type="text" class="search" id="search" placeholder="Search Key Input">
+				</div>
 				{{> social-icons}}
 			</div>
 		</div>
@@ -21,6 +26,10 @@
 
 	<div class="blog-navbar-under-layer"></div>
 
+	<aside class="site-menu">
+		{{navigation}}
+	</aside>
+	
 	<!--
 	<div class="blog-title container">
 		<div class="blog-logo">

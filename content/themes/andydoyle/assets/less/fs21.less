@@ -1,0 +1,139 @@
+
+/* 自定义 */
+body {
+	overflow: hidden;
+	overflow-y: auto;
+}
+.blog-navbar .navbar-nav .iconfont {
+  font-size: 22px;
+}
+.share .icon i {
+  font-size: 44px;
+}
+
+
+body.menu-open {
+	.site-menu {
+		transform: translate3d(0, 0, 0);
+	}
+}
+.site-nav-switch {
+	position: relative;
+	border: 0;
+	float: right;
+	outline: none;
+	background: transparent;
+	transition: all 0.24s ease;
+
+	&.active {
+		transform: rotate(90deg);
+	}
+}
+
+.site-menu {
+	position: absolute;
+  	top: 53px;
+  	right: 0;
+	width: 220px;
+  	padding: 0px;
+  	padding-bottom: 8px;
+  	background: white;
+	border: 1px solid #e6e7e6;
+	border-top: none;
+	border-right: 0;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+	transform: translate3d(280px, 0, 0);
+	transition: transform 0.24s ease;
+  	z-index: 2;
+  	
+  	.menu {
+	  .nav {
+		  position: relative;
+		  display: block;
+		  color: #414141;
+		  font-size: 0.8125em;
+		  padding: 7px 20px;
+		  border-left: 3px solid transparent;
+		  text-decoration: none;
+		  
+		  &:hover {
+		  	  text-decoration: none;
+			  background: fade(lighten(#e1e2e3, 3%), 60%);
+			  border-color: #3AAAF5;
+		  }
+		  &:first-child {
+		      text-decoration: none;
+			  background: fade(lighten(#e1e2e3, 3%), 60%);
+			  border-color: #3AAAF5;
+		  }
+	  }
+  	}
+}
+
+
+.navbar-collapse {
+	position: relative;
+}
+.nav-search {
+	float: left;
+	overflow: hidden;
+		
+	&.open-search {
+		.navbar-text {
+			span {
+				top: -40px;
+				opacity: 0;
+			}
+		}
+		input {
+			top: 12px;
+			opacity: 1;
+		}
+	}
+	.navbar-text {
+		span {
+			display: inline-block;
+    		position: relative;
+    		top: 0px;
+    		opacity: 1;
+    		transition: all 0.5s ease;
+    		position: relative;
+
+    		&:after {
+    			content: '';
+			    position: absolute;
+			    border-bottom: 1px solid #95a5a6;
+			    left: 0;
+			    bottom: -4px;
+			    display: block;
+			    width: 100%;
+			    height: 1px;
+    		}
+		}
+	}
+	input {
+		position: absolute;
+	    left: 116px;
+	    /*top: 12px;*/
+	    top: 46px;
+	    opacity: 0;
+	    /*opacity: 1;*/
+	    background: transparent;
+	    border: none;
+	    border-bottom: 1px solid #95a5a6;
+	    box-shadow: none;
+	    outline: none;
+	    padding: 4px 12px;
+	    padding-left: 0;
+	    width: 165px;
+	    transition: all 0.5s ease;
+	    color: #fff;
+
+	    &:focus {
+	    	border: none;
+	    	box-shadow: none;
+	    	outline: none;
+	    	border-bottom: 1px solid #95a5a6;
+	    }
+	}
+}

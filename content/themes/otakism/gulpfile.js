@@ -1,6 +1,5 @@
 /* gulp dependencies */
 var gulp = require('gulp');
-var less = require('gulp-less');
 var watch = require('gulp-watch');
 var gulpFilter = require('gulp-filter');
 var imagemin = require('gulp-imagemin');
