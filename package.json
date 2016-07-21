@@ -20,6 +20,7 @@
   "scripts": {
     "preinstall": "npm install semver && node -e \"require('./core/server/utils/startup-check.js').nodeVersion()\"",
     "start": "node index",
+    "production": "pm2 stop ghost;pm2 start index.js --name ghost",
     "test": "grunt validate --verbose"
   },
   "engines": {
