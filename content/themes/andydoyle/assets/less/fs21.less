@@ -8,8 +8,16 @@ body {
 		margin-left: 0;
 	}
 }
+.blog-navbar {
+	position: relative;
+	z-index: 1010;
+}
 .blog-navbar .navbar-nav .iconfont {
   font-size: 22px;
+}
+.navbar-brand {
+	position: relative;
+	z-index: 1200;
 }
 .share .icon i {
   font-size: 44px;
@@ -19,6 +27,10 @@ body {
 body.menu-open {
 	.site-menu {
 		transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
 	}
 }
 .site-nav-switch {
@@ -28,9 +40,16 @@ body.menu-open {
 	outline: none;
 	background: transparent;
 	transition: all 0.24s ease;
+	-moz-transition: all 0.24s ease;
+	-webkit-transition: all 0.24s ease;
+	-o-transition: all 0.24s ease;
 
 	&.active {
 		transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
 	}
 }
 
@@ -47,7 +66,16 @@ body.menu-open {
 	border-right: 0;
 	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 	transform: translate3d(280px, 0, 0);
-	transition: transform 0.24s ease;
+	-ms-transform: translate3d(280px, 0, 0);
+	-moz-transform: translate3d(280px, 0, 0);
+	-webkit-transform: translate3d(280px, 0, 0);
+	-o-transform: translate3d(280px, 0, 0);
+
+	transition: all 0.24s ease;
+	-moz-transition: all 0.24s ease;
+	-webkit-transition: all 0.24s ease;
+	-o-transition: all 0.24s ease;
+
   	z-index: 2;
   	
   	.menu {
@@ -140,4 +168,24 @@ body.menu-open {
 	    	border-bottom: 1px solid #95a5a6;
 	    }
 	}
+}
+
+
+.progressbar-wrapper {
+	position: fixed;
+    height: 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: #fff;
+    max-width: 1440px;
+    z-index: 1000;
+}
+
+.progressbar {
+	width: 0;
+    height: 4px;
+    background: #3AAAF5;
+    max-width: 1440px;
 }

@@ -22,6 +22,7 @@ var toggleMenu = function(e) {
 };
 $(function() {
 	$('.site-nav-switch').on('click', toggleMenu);
+	$('.navbar-toggle').on('click', toggleMenu);
 	$('.site-menu').on('click', function (e) {
 		e.stopPropagation();
 	});
@@ -38,6 +39,10 @@ $(function() {
 		if(e.which === 13) {
 			window.open(SEARCH_URL + $(this).val(), 'search')
 		}
+	})
+	$(window).scroll(function() {
+	    var e = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+	    $(".progressbar").css("width", e + "%")
 	})
 });
 })(jQuery);
