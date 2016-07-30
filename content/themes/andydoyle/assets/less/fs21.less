@@ -3,9 +3,48 @@
 body {
 	overflow: hidden;
 	overflow-y: auto;
+	font-family: "Source Sans Pro",Arial,Helvetica,sans-serif,'Microsoft YaHei', 'STXihei', 'Simhei';
 
 	img {
 		margin-left: 0;
+	}
+
+	
+}
+
+.post {
+	a {
+		border-bottom: 2px solid #3AAAF5;
+		color: #333;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	.post-title {
+		a {
+			border-bottom: none;
+		}
+	}
+
+	pre {
+	    background: #f6f6f6;
+	    color: #555;
+	    font-size: 1em;
+	    margin: 0;
+	    border: 0;
+	    border-radius: 0;
+	    border-left: 2px solid #3AAAF5;
+	    padding: 10.5px 21px;
+	}
+}
+.post-tags {
+	a {
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 .blog-navbar {

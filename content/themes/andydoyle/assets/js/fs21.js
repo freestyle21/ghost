@@ -44,5 +44,18 @@ $(function() {
 	    var e = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 	    $(".progressbar").css("width", e + "%")
 	})
+
+	const consoleInfo = `
+
+   ▄▟████▙▄       ____  _ ____  _  _____ _____ 
+ ▟██████████▙    |  _ \(_)  _ \(_) |  ___| ____|
+██████████████   | | | | | | | | | | |_  |  _| 
+██████████████   | |_| | | |_| | | |  _| | |___ 
+ ▜██████████▛    |____/|_|____/|_| |_|   |_____|
+   ▀▜████▛▀      
+
+简历投递，发送至 qubaoming[at]didichuxing.com
+`
+	console.log(consoleInfo)
 });
 })(jQuery);

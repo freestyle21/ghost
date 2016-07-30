@@ -42,3 +42,5 @@ projectFilesBackup
 .build
 .dist
 .tmp
+
+config.js
